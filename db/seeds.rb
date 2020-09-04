@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Tag.destroy_all
+
+tags = %w(Design Rails Product Startup HTML/CSS UX UI)
+styles = %w(yellow green blue purple)
+tags.each do |tag|
+  Tag.create!(name: tag, style: styles.sample)
+end

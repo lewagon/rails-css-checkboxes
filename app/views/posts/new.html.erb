@@ -1,0 +1,9 @@
+<div class="form-post">
+  <h1>Write a post</h1>
+  <%= simple_form_for(@post) do |f| %>
+    <%= f.input :title, placeholder: "How to design a form" %>
+    <%= f.input :content, placeholder: "In this tutorial..." %>
+    <%= f.association :tags, as: :check_boxes, collection: Tag.all.map{|tag| [tag.name, tag.id, {class: "form-check-input check_boxes optional #{tag.style}"}]} %>
+    <%= f.submit "Save", class: "btn btn-primary btn-block"  %>
+  <% end %>
+</div>
