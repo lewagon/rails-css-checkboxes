@@ -1,8 +1,8 @@
 <div class="form-post">
-  <h1><%= @post.title %></h1>
-  <p><%= @post.content %></p>
+  <h1><%= @cheatsheet.title %></h1>
+  <p><%= @cheatsheet.snippet %></p>
   <p>
-  <% @post.tags.each do |tag| %>
+  <% @cheatsheet.tags.each do |tag| %>
     <span class="tag <%= tag.style %>"><%= tag.name %></span>
   <% end %>
   </p>
