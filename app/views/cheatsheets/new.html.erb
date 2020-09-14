@@ -1,8 +1,2 @@
 <h1>Write a Cheatsheet</h1>
-<%= simple_form_for(@cheatsheet) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :snippet %>
-  <%= f.association :language, as: :radio_buttons, collection: Language.all %>
-  <%= f.association :tags, as: :check_boxes, collection: Tag.all.map{|tag| [tag.name, tag.id, {class: "form-check-input check_boxes optional #{tag.style}"}]} %>
-  <%= f.submit "Save", class: "btn btn-secondary btn-block"  %>
-<% end %>
+<%= render 'form', cheatsheet: @cheatsheet %>

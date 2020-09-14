@@ -1,6 +1,19 @@
 class CheatsheetsController < ApplicationController
+
+  def index
+    @cheatsheets = Cheatsheet.all
+  end
+
+  def show
+    @cheatsheet = Cheatsheet.find(params[:id])
+  end
+
   def new
     @cheatsheet = Cheatsheet.new
+  end
+
+  def edit
+    @cheatsheet = Cheatsheet.find(params[:id])
   end
 
   def create
@@ -12,13 +25,9 @@ class CheatsheetsController < ApplicationController
     end
   end
 
-  def show
-    @cheatsheet = Cheatsheet.find(params[:id])
-  end
-
   private
 
   def cheatsheet_params
-    params.require(:cheatsheet).permit(:title, :snippet, tag_ids: [])
+    params.require(:cheatsheet).permit(:title, :snippet, :language_id, tag_ids: [])
   end
 end

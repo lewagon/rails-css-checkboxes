@@ -1,9 +1,4 @@
-<div class="form-post">
-  <h1><%= @cheatsheet.title %></h1>
-  <p><%= @cheatsheet.snippet %></p>
-  <p>
-  <% @cheatsheet.tags.each do |tag| %>
-    <span class="tag <%= tag.style %>"><%= tag.name %></span>
-  <% end %>
-  </p>
-</div>
+<p class="language-header <%= @cheatsheet.language.style %>"><%= @cheatsheet.language.name %></p>
+<h1><%= @cheatsheet.title %></h1>
+<code><%= @cheatsheet.snippet %></code>
+<%= render partial: 'tag', collection: @cheatsheet.tags %>

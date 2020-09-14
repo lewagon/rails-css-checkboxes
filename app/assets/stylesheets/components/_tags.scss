@@ -1,32 +1,10 @@
-.tag{
+.tag {
   font-size: 0.8rem;
   border-radius: $rounded-pill;
   padding: 0.2rem 0.5rem;
-}
-
-.purple {
-  background-color: #ECEAFF;
+  background-color: $light-purple;
   color: $purple;
   border: 1px solid $purple;
-}
-
-
-.blue {
-  background-color: #E8FAFE;
-  color: #62DDF5;
-  border: 1px solid #62DDF5;
-}
-
-
-.green {
-  background-color: #E4FFF3;
-  color: #1EDD88;
-  border: 1px solid #1EDD88;
-}
-
-
-.yellow {
-  background-color: #FFF7E8;
-  color: #FFC65A;
-  border: 1px solid #FFC65A;
+  margin-right: 0.6rem;
+  margin-bottom: 0.6rem;
 }
