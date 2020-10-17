@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2020_09_04_205820) do
 
   create_table "cheatsheets", force: :cascade do |t|
     t.string "title"
-    t.string "snippet"
+    t.text "code"
     t.bigint "language_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -42,7 +42,6 @@ ActiveRecord::Schema.define(version: 2020_09_04_205820) do
 
   create_table "tags", force: :cascade do |t|
     t.string "name"
-    t.string "style"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

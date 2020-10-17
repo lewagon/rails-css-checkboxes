@@ -9,10 +9,9 @@
 Tag.destroy_all
 Language.destroy_all
 
-tags = %w(Shortcut Tip Snippet Basics Advanced Error)
-styles = %w(yellow green blue purple)
+tags = %w(Shortcut Tip Snippet Basics Advanced)
 tags.each do |tag|
-  Tag.create!(name: tag, style: styles.sample)
+  Tag.create!(name: tag)
 end
 
 

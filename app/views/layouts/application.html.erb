@@ -11,14 +11,18 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
-  <body>
+  <body id="<%= params[:controller] %>_<%= params[:action] %>">
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 col-md-6 offset-md-3 content">
+      <% if ['index', 'show'].include? action_name %>
+        <%= yield %>
+      <% else %>
+        <div class="col-xs-12 col-md-6 offset-md-3 card">
           <%= yield %>
         </div>
+      <% end %>
       </div>
     </div>
   </body>

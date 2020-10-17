@@ -1,10 +1,33 @@
 .tag {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   border-radius: $rounded-pill;
-  padding: 0.2rem 0.5rem;
+  padding: 0.1rem 0.5rem;
   background-color: $light-purple;
   color: $purple;
   border: 1px solid $purple;
   margin-right: 0.6rem;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.4rem;
+  display: inline-block;
+}
+
+
+.cheatsheet_tags {
+  .form-check {
+    display: inline-block;
+    padding-left: 0;
+  }
+  
+  input + .tag {
+    cursor: pointer;
+  }
+  
+  input:checked + .tag {
+    background-color: $purple;
+    color: white;
+  }
+  
+  input[type="checkbox"] {
+    transform: scale(0);
+    margin:0;
+  }
 }

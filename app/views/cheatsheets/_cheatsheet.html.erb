@@ -1,0 +1,13 @@
+<div class="col-sm-12 col-md-6 offset-md-3 card preview <%= cheatsheet.language.style %> <%= closed ||= '' %>">
+  <div class="tools">
+    <%= link_to "", edit_cheatsheet_path(cheatsheet), class:"edit" %>
+    <%= link_to "",
+                  cheatsheet_path(cheatsheet),
+                  method: :delete,
+                  class: 'delete',
+                  data: { confirm: "Are you sure?" } %>
+  </div>
+  <h2><%= cheatsheet.title %></h2>
+  <pre><code><%= cheatsheet.code %></code></pre>
+  <p><%= render partial: 'tag', collection: cheatsheet.tags %></p>
+</div>

@@ -1,0 +1,22 @@
+code, #cheatsheet_code {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.8rem;
+  display: block;
+  color: #2e2f2f;
+  min-height: 98px;
+  border-radius: $border-radius;
+}
+
+pre {
+  font-size: 0.8rem;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+code {
+  border: none;
+  border-radius: 0px;
+  border-left: 2px solid #b2b2b2;
+  padding-left: 10px;
+}

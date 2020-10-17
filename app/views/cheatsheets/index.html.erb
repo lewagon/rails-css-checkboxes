@@ -1,5 +1,1 @@
-<h1>All my cheatsheets</h1>
-<% @cheatsheets.each do |cheatsheet| %>
-  <h3><%=link_to cheatsheet.title, cheatsheet_path(cheatsheet) %></h2>
-  <%= render partial: 'tag', collection: cheatsheet.tags %>
-<% end %>
+<%= render @cheatsheets, closed: 'closed' %>

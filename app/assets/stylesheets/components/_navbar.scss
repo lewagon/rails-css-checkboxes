@@ -1,8 +1,22 @@
 .navbar-lewagon {
-  justify-content: flex-end;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+  padding: 7px 17px;
 }
 
 .navbar-lewagon .nav-link img {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
+}
+
+.navbar-nav {
+  flex-direction: row;
+}
+
+.nav-item {
+  margin-left: 6px;
+}
+
+#cheatsheets_index .nav-item.index, #cheatsheets_new .nav-item.new {
+  filter: brightness(2);
 }

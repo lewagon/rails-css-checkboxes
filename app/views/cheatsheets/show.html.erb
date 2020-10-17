@@ -1,4 +1,1 @@
-<p class="language-header <%= @cheatsheet.language.style %>"><%= @cheatsheet.language.name %></p>
-<h1><%= @cheatsheet.title %></h1>
-<code><%= @cheatsheet.snippet %></code>
-<%= render partial: 'tag', collection: @cheatsheet.tags %>
+<%= render @cheatsheet %>

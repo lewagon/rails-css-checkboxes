@@ -1,11 +1,11 @@
 class CheatsheetsController < ApplicationController
+  before_action :set_cheatsheet, only: [:show, :edit, :update, :destroy]
 
   def index
     @cheatsheets = Cheatsheet.all
   end
 
   def show
-    @cheatsheet = Cheatsheet.find(params[:id])
   end
 
   def new
@@ -13,7 +13,6 @@ class CheatsheetsController < ApplicationController
   end
 
   def edit
-    @cheatsheet = Cheatsheet.find(params[:id])
   end
 
   def create
@@ -25,9 +24,23 @@ class CheatsheetsController < ApplicationController
     end
   end
 
-  private
-
-  def cheatsheet_params
-    params.require(:cheatsheet).permit(:title, :snippet, :language_id, tag_ids: [])
+  def update
+    @cheatsheet.update(cheatsheet_params)
+    redirect_to cheatsheet_path(@cheatsheet)
   end
+
+  def destroy
+    @cheatsheet.destroy
+    redirect_to cheatsheets_path
+  end
+  
+  private
+  def set_cheatsheet
+    @cheatsheet = Cheatsheet.find(params[:id])
+  end
+  
+  def cheatsheet_params
+    params.require(:cheatsheet).permit(:title, :code, :language_id, tag_ids: [])
+  end
+  
 end

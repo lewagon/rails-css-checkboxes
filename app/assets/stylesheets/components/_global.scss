@@ -1,28 +1,19 @@
-body{
+body {
   height: 100vh;
-  background: linear-gradient(130deg, $light-yellow, $light-purple);
-}
-
-.content {
-  background: white;
-  padding: 2% 5% 5% 5%;
-  border-radius: 2rem;
-  border: 1px solid $light-gray;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 h1 {
-  font-size: 1.7rem;
-  margin-bottom: 20px;
-  margin-top: 2rem;
+  font-size: 1.3rem;
+  margin-bottom: 0;
+  margin-top: 0;
   text-align: left;
+  color: white;
+  font-family: $body-font;
 }
 
-code, #cheatsheet_snippet {
-  background-color: #2e2f2f;
-  display: block;
-  padding: 1rem 1.1rem;
-  color: white;
-  margin: 1.6rem 0;
-  border-radius: $border-radius;
+h2 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  margin-top: 4px;
+  text-align: left;
 }
