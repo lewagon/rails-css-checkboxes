@@ -1,4 +1,5 @@
 .tag {
+  display: inline-block;
   font-size: 0.7rem;
   border-radius: $rounded-pill;
   padding: 0.1rem 0.5rem;
@@ -7,36 +8,31 @@
   border: 1px solid $purple;
   margin-right: 0.6rem;
   margin-bottom: 0.4rem;
+}
+
+.tag-item {
   display: inline-block;
 }
 
+.tag-selector {
+  transform: scale(0);
+  margin:0;
+}
 
-.snippet_tags {
-  .form-check {
-    display: inline-block;
-    padding-left: 0;
-  }
-  
-  .tag + label {
-    cursor: pointer;
-    font-size: 0.7rem;
-    border-radius: $rounded-pill;
-    padding: 0.1rem 0.5rem;
-    background-color: $light-purple;
-    color: $purple;
-    border: 1px solid $purple;
-    margin-right: 0.6rem;
-    margin-bottom: 0.4rem;
-    display: inline-block;
-  }
-  
-  .tag:checked + label {
-    background-color: $purple;
-    color: white;
-  }
-  
-  .tag {
-    transform: scale(0);
-    margin:0;
-  }
+.tag-selector + label {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.7rem;
+  border-radius: $rounded-pill;
+  padding: 0.1rem 0.5rem;
+  background-color: $light-purple;
+  color: $purple;
+  border: 1px solid $purple;
+  margin-right: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.tag-selector:checked + label {
+  background-color: $purple;
+  color: white;
 }

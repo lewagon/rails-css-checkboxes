@@ -15,7 +15,7 @@ input[type="submit"]:hover{
   box-shadow: 1px 1px 2px #e6e6e6, -1px -1px 2px #ffffff;
 }
 
-label.string, label.text, legend {
+label.string, label.text, label.boolean, legend {
   font-size: 1rem !important;
   font-family: $headers-font;
 }
@@ -24,74 +24,11 @@ label.string, label.text, legend {
   margin-bottom: 1rem;
 }
 
-
 .form-control {
   border: none;
   background-color: $light-gray;
 }
 
-
-.snippet-language-wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
-  .form-check{
-    padding-left: 0;
-    flex: 0 0 29%;
-  }
-  
-  input[type="radio"]{
-    transform: scale(0);
-    margin:0;
-  }
-
-  input[type="radio"] + label {
-    cursor: pointer;
-    display: block;
-    width: 100%;
-    font-size: 12px;
-    text-align: left;
-    color: $gray;
-    padding: 10px 10px 30px 10px;
-    border: 1px solid $light-gray;
-    border-radius: $border-radius;
-    background-size: 20% !important;
-    background-repeat: no-repeat !important;
-    background-position: 87% 83% !important;
-  }
-  
-  input[type="radio"]:checked + label {
-    color: white !important;
-  }
-  
-  
-  input[type="radio"].ruby + label {
-    background: image-url('ruby.svg'), white;
-  }
-  
-  input[type="radio"].ruby:checked + label {
-    background: image-url('ruby-checked.svg'), $ruby;
-    border-color: $ruby;
-  }
-  
-  
-  input[type="radio"].javascript + label {
-    background: image-url('javascript.svg'), white;
-  }
-  
-  input[type="radio"].javascript:checked + label {
-    background: image-url('javascript-checked.svg'), $javascript;
-    border-color: $javascript;
-  }
-  
-  
-  input[type="radio"].css + label {
-    background: image-url('css.svg'), white;
-  }
-  
-  input[type="radio"].css:checked + label {
-    background: image-url('css-checked.svg'), $css;
-    border-color: $css;
-  }
+.form-check{
+  padding-left: 0;
 }

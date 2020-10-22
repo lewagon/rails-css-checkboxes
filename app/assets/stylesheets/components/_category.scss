@@ -1,0 +1,64 @@
+.category-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+  .category-item {
+    flex: 0 0 29%;
+  }
+}
+
+
+.category-selector {
+  transform: scale(0);
+  margin: 0;
+}
+
+.category-selector + label {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  font-size: 12px;
+  text-align: left;
+  color: $gray;
+  padding: 10px 10px 30px 10px;
+  border: 1px solid $light-gray;
+  border-radius: $border-radius;
+  background-size: 20% !important;
+  background-repeat: no-repeat !important;
+  background-position: 87% 83% !important;
+}
+
+.category-selector:checked + label {
+  color: white !important;
+}
+
+
+.category-selector.ruby + label {
+  background: image-url('ruby.svg'), white;
+}
+
+.category-selector.ruby:checked + label {
+  background: image-url('ruby-checked.svg'), $ruby;
+  border-color: $ruby;
+}
+
+
+.category-selector.javascript + label {
+  background: image-url('javascript.svg'), white;
+}
+
+.category-selector.javascript:checked + label {
+  background: image-url('javascript-checked.svg'), $javascript;
+  border-color: $javascript;
+}
+
+
+.category-selector.css + label {
+  background: image-url('css.svg'), white;
+}
+
+.category-selector.css:checked + label {
+  background: image-url('css-checked.svg'), $css;
+  border-color: $css;
+}

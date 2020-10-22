@@ -9,7 +9,7 @@
 Tag.destroy_all
 Language.destroy_all
 
-tags = %w(Shortcut Tip Snippet Basics Advanced)
+tags = %w(Shortcut Tip Snippet Basics Advanced Front-end Back-end)
 tags.each do |tag|
   Tag.create!(name: tag)
 end
