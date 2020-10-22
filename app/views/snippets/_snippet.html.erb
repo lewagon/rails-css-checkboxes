@@ -1,0 +1,13 @@
+<div class="col-sm-12 col-md-6 offset-md-3 card preview <%= snippet.language.style %> <%= closed ||= '' %>">
+  <div class="tools">
+    <%= link_to "", edit_snippet_path(snippet), class:"edit" %>
+    <%= link_to "",
+                  snippet_path(snippet),
+                  method: :delete,
+                  class: 'delete',
+                  data: { confirm: "Are you sure?" } %>
+  </div>
+  <h2><%= snippet.title %></h2>
+  <pre><code><%= snippet.code %></code></pre>
+  <p><%= render partial: 'tag', collection: snippet.tags %></p>
+</div>

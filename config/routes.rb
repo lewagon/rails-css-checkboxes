@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :cheatsheets
-  root to: 'cheatsheets#index'
+  resources :snippets
+  root to: 'snippets#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

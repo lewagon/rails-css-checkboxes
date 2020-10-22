@@ -15,29 +15,30 @@ ActiveRecord::Schema.define(version: 2020_09_04_205820) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "cheatsheet_tags", force: :cascade do |t|
-    t.bigint "cheatsheet_id", null: false
-    t.bigint "tag_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["cheatsheet_id"], name: "index_cheatsheet_tags_on_cheatsheet_id"
-    t.index ["tag_id"], name: "index_cheatsheet_tags_on_tag_id"
-  end
-
-  create_table "cheatsheets", force: :cascade do |t|
-    t.string "title"
-    t.text "code"
-    t.bigint "language_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["language_id"], name: "index_cheatsheets_on_language_id"
-  end
-
   create_table "languages", force: :cascade do |t|
     t.string "name"
     t.string "style"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "snippet_tags", force: :cascade do |t|
+    t.bigint "snippet_id", null: false
+    t.bigint "tag_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["snippet_id"], name: "index_snippet_tags_on_snippet_id"
+    t.index ["tag_id"], name: "index_snippet_tags_on_tag_id"
+  end
+
+  create_table "snippets", force: :cascade do |t|
+    t.string "title"
+    t.text "code"
+    t.boolean "archived", default: false
+    t.bigint "language_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["language_id"], name: "index_snippets_on_language_id"
   end
 
   create_table "tags", force: :cascade do |t|
@@ -58,7 +59,7 @@ ActiveRecord::Schema.define(version: 2020_09_04_205820) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "cheatsheet_tags", "cheatsheets"
-  add_foreign_key "cheatsheet_tags", "tags"
-  add_foreign_key "cheatsheets", "languages"
+  add_foreign_key "snippet_tags", "snippets"
+  add_foreign_key "snippet_tags", "tags"
+  add_foreign_key "snippets", "languages"
 end

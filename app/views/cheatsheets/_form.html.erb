@@ -1,7 +1,0 @@
-<%= simple_form_for(cheatsheet) do |f| %>
-  <%= f.input :title %>
-  <%= f.association :language, as: :radio_buttons, collection_wrapper_class: 'cheatsheet-language-wrapper',  collection: Language.all.map{|language| [language.name, language.id, {class: "form-check-input radio_buttons required #{language.style}"}]} %>
-  <%= f.input :code %>
-  <%= f.association :tags, as: :check_boxes, item_label_class: "tag" %>
-  <%= f.submit "Save", class: " "  %>
-<% end %>

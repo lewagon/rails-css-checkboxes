@@ -1,0 +1,7 @@
+<%= simple_form_for(snippet) do |f| %>
+  <%= f.input :title %>
+  <%= f.association :language, as: :radio_buttons, collection_wrapper_class: 'snippet-language-wrapper',  collection: Language.all.map{|language| [language.name, language.id, {class: "form-check-input radio_buttons required #{language.style}"}]} %>
+  <%= f.input :code %>
+  <%= f.association :tags, as: :check_boxes, input_html: { class: "tag" } %>
+  <%= f.submit "Save", class: " "  %>
+<% end %>

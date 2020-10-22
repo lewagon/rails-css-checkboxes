@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CheatsheetTest < ActiveSupport::TestCase
+class SnippetTagTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
