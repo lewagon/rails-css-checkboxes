@@ -34,31 +34,31 @@
 }
 
 
-.category-selector.ruby + label {
+.category-selector[data-style=ruby] + label {
   background: image-url('ruby.svg'), white;
 }
 
-.category-selector.ruby:checked + label {
+.category-selector[data-style=ruby]:checked + label {
   background: image-url('ruby-checked.svg'), $ruby;
   border-color: $ruby;
 }
 
 
-.category-selector.javascript + label {
+.category-selector[data-style=javascript] + label {
   background: image-url('javascript.svg'), white;
 }
 
-.category-selector.javascript:checked + label {
+.category-selector[data-style=javascript]:checked + label {
   background: image-url('javascript-checked.svg'), $javascript;
   border-color: $javascript;
 }
 
 
-.category-selector.css + label {
+.category-selector[data-style=css] + label {
   background: image-url('css.svg'), white;
 }
 
-.category-selector.css:checked + label {
+.category-selector[data-style=css]:checked + label {
   background: image-url('css-checked.svg'), $css;
   border-color: $css;
 }
