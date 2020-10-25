@@ -1,30 +1,12 @@
 <%= simple_form_for(snippet) do |f| %>
   <%= f.input :title %>
-  <%#= f.association   :language,
-                      as: :radio_buttons,
-                      collection_wrapper_tag: "div",
-                      collection_wrapper_class: 'category-wrapper',
-                      item_wrapper_class: 'category-item',
-                      collection: Language.all.map{|language| [language.name, language.id, {class: "#{language.style}"}]} %>
-                      <%= f.association   :language,
+  <%= f.association   :category,
                       as: :radio_buttons,
                       collection_wrapper_tag: "div",
                       collection_wrapper_class: 'category-wrapper',
                       item_wrapper_class: 'category-item',
                       input_html: {class: 'category-selector'},
-                      collection: Language.all.map{|language| [language.name, language.id, data: {style: language.style }]} %>
- 
-  <%#= f.association :language,
-                    as: :radio_buttons,
-                    collection_wrapper_tag: "div",
-                    collection_wrapper_class: 'category-wrapper',
-                    item_wrapper_class: 'category-item',
-                    class_method: ->(item){ item.style},
-                    input_html: { toto: ->(item){ item.style }} %>
-  <%#= f.collection_radio_buttons(:language, Language.all, :id, :name) do |b| %>
-    <%#= b.radio_button( class: b.object.style) %>
-    <%#= b.label{ b.object.name } %>
-  <%# end %>
+                      collection: Category.all.map{|category| [category.name, category.id, data: {style: category.style }]} %>
   <%= f.input :code %>
   <%= f.association :tags, as: :check_boxes, input_html: { class: "tag-selector" }, item_wrapper_class: 'tag-item' %>
   <%= f.input :archived, input_html: { class: "toggle" } %>

@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Tag.destroy_all
-Language.destroy_all
+Category.destroy_all
 
 tags = %w(Shortcut Tip Snippet Basics Advanced Front-end Back-end)
 tags.each do |tag|
@@ -15,7 +15,7 @@ tags.each do |tag|
 end
 
 
-languages = %w(Ruby Javascript CSS)
-languages.each do |language|
-  Language.create(name: language, style: language.downcase)
+categories = %w(Ruby Javascript CSS)
+categories.each do |category|
+  Category.create(name: category, style: category.downcase)
 end
