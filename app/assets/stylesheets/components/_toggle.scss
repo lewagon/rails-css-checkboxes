@@ -1,6 +1,6 @@
 .toggle {
+  position: absolute;
   transform: scale(0);
-  margin: 0;
 }
 
 .toggle + label {
@@ -42,4 +42,24 @@
 
 .toggle:checked + label::after {
   left: 18px;
+}
+
+
+// Simple Form valid and invalid feedbacks
+
+.toggle.is-valid + label {
+  color: $green;
+}
+
+.toggle.is-valid:checked + label {
+  color: $green;
+}
+
+
+.toggle.is-invalid + label {
+  color: $red;
+}
+
+.toggle.is-invalid:checked + label {
+  color: $red;
 }

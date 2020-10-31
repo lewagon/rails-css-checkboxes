@@ -8,10 +8,9 @@
   }
 }
 
-
 .category-selector {
+  position: absolute;
   transform: scale(0);
-  margin: 0;
 }
 
 .category-selector + label {
@@ -61,4 +60,32 @@
 .category-selector[data-style=css]:checked + label {
   background: image-url('css-checked.svg'), $css;
   border-color: $css;
+}
+
+
+// Simple Form valid and invalid feedbacks
+
+.category-selector.is-valid + label {
+  background-color: white;
+  border-color: $green;
+  color: $green;
+}
+
+.category-selector.is-valid:checked + label {
+  background-color: $green;
+  border-color: $green;
+  color: white;
+}
+
+
+.category-selector.is-invalid + label {
+  background-color: white;
+  border-color: $red;
+  color: $red;
+}
+
+.category-selector.is-invalid:checked + label {
+  background-color: $red;
+  border-color: $red;
+  color: white;
 }

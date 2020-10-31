@@ -15,8 +15,8 @@
 }
 
 .tag-selector {
+  position: absolute;
   transform: scale(0);
-  margin:0;
 }
 
 .tag-selector + label {
@@ -34,5 +34,32 @@
 
 .tag-selector:checked + label {
   background-color: $purple;
+  color: white;
+}
+
+
+// Simple Form valid and invalid feedbacks
+
+.tag-selector.is-valid + label {
+  background-color: $light-green;
+  border-color: $green;
+  color: $green;
+}
+
+.tag-selector.is-valid:checked + label {
+  background-color: $green;
+  border-color: $green;
+  color: white;
+}
+
+.tag-selector.is-invalid + label {
+  background-color: $light-red;
+  border-color: $red;
+  color: $red;
+}
+
+.tag-selector.is-invalid:checked + label {
+  background-color: $red;
+  border-color: $red;
   color: white;
 }
