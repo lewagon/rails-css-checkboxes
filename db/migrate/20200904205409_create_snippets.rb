@@ -3,8 +3,8 @@ class CreateSnippets < ActiveRecord::Migration[6.0]
     create_table :snippets do |t|
       t.string :title
       t.text :code
+      t.string :category
       t.boolean :archived, default: false
-      t.references :category, null: false, foreign_key: true
 
       t.timestamps
     end

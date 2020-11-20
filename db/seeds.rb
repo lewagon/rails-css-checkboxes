@@ -13,9 +13,3 @@ tags = %w(Shortcut Tip Snippet Basics Advanced Front-end Back-end)
 tags.each do |tag|
   Tag.create!(name: tag)
 end
-
-
-categories = %w(Ruby Javascript CSS)
-categories.each do |category|
-  Category.create(name: category, style: category.downcase)
-end
