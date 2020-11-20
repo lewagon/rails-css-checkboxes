@@ -7,7 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Tag.destroy_all
-Category.destroy_all
 
 tags = %w(Shortcut Tip Snippet Basics Advanced Front-end Back-end)
 tags.each do |tag|
