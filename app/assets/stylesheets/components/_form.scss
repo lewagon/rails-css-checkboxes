@@ -15,9 +15,14 @@ input[type="submit"]:hover{
   box-shadow: 1px 1px 2px #e6e6e6, -1px -1px 2px #ffffff;
 }
 
+input[type="text"]{
+  font-size: 0.8rem;
+}
+
 label.string, label.text, label.boolean, legend {
   font-size: 1rem !important;
   font-family: $headers-font;
+  font-weight: 700;
 }
 
 .form-group{
