@@ -1,8 +1,8 @@
 class Snippet < ApplicationRecord
   CATEGORIES = ["Ruby", "JavaScript", "CSS"]
 
-  has_many :snippet_tags
+  has_many :snippet_tags, dependent: :destroy
   has_many :tags, through: :snippet_tags
   validates :title, presence: true
-  validates_inclusion_of :category, in: CATEGORIES
+  validates :category, inclusion: { in: CATEGORIES }
 end
