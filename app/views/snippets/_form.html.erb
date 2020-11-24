@@ -1,12 +1,12 @@
 <%= simple_form_for(snippet) do |f| %>
   <%= f.input :title %>
-  <%= f.association   :category,
-                      as: :radio_buttons,
-                      collection_wrapper_tag: "div",
-                      collection_wrapper_class: 'category-wrapper',
-                      item_wrapper_class: 'category-item',
-                      input_html: {class: 'category-selector'},
-                      collection: Category.all.map{|category| [category.name, category.id, data: {style: category.style }]} %>
+  <%= f.input :category,
+              as: :radio_buttons,
+              collection_wrapper_tag: "div",
+              collection_wrapper_class: 'category-wrapper',
+              item_wrapper_class: 'category-item',
+              input_html: {class: 'category-selector'},
+              collection: Snippet::CATEGORIES %>
   <%= f.input :code %>
   <%= f.association :tags, as: :check_boxes, input_html: { class: "tag-selector" }, item_wrapper_class: 'tag-item' %>
   <%= f.input :archived, input_html: { class: "toggle" } %>

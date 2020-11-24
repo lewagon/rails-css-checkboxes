@@ -1,1 +1,5 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+## Advanced CSS for checkboxes and radio buttons
+
+Demo of a tool to store snippets of code.
+
+![Comparisons](https://raw.githubusercontent.com/lewagon/fullstack-images/master/tutorials/css_advanced_form_checkboxes/comparisons.png)

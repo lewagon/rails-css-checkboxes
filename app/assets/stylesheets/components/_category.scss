@@ -33,31 +33,31 @@
 }
 
 
-.category-selector[data-style=ruby] + label {
+#snippet_category_ruby + label {
   background: image-url('ruby.svg'), white;
 }
 
-.category-selector[data-style=ruby]:checked + label {
+#snippet_category_ruby:checked + label {
   background: image-url('ruby-checked.svg'), $ruby;
   border-color: $ruby;
 }
 
 
-.category-selector[data-style=javascript] + label {
+#snippet_category_javascript + label {
   background: image-url('javascript.svg'), white;
 }
 
-.category-selector[data-style=javascript]:checked + label {
+#snippet_category_javascript:checked + label {
   background: image-url('javascript-checked.svg'), $javascript;
   border-color: $javascript;
 }
 
 
-.category-selector[data-style=css] + label {
+#snippet_category_css + label {
   background: image-url('css.svg'), white;
 }
 
-.category-selector[data-style=css]:checked + label {
+#snippet_category_css:checked + label {
   background: image-url('css-checked.svg'), $css;
   border-color: $css;
 }

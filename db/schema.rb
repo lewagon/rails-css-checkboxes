@@ -15,13 +15,6 @@ ActiveRecord::Schema.define(version: 2020_09_04_205820) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "categories", force: :cascade do |t|
-    t.string "name"
-    t.string "style"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "snippet_tags", force: :cascade do |t|
     t.bigint "snippet_id", null: false
     t.bigint "tag_id", null: false
@@ -34,11 +27,10 @@ ActiveRecord::Schema.define(version: 2020_09_04_205820) do
   create_table "snippets", force: :cascade do |t|
     t.string "title"
     t.text "code"
+    t.string "category"
     t.boolean "archived", default: false
-    t.bigint "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["category_id"], name: "index_snippets_on_category_id"
   end
 
   create_table "tags", force: :cascade do |t|
@@ -49,5 +41,4 @@ ActiveRecord::Schema.define(version: 2020_09_04_205820) do
 
   add_foreign_key "snippet_tags", "snippets"
   add_foreign_key "snippet_tags", "tags"
-  add_foreign_key "snippets", "categories"
 end
