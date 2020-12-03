@@ -2,7 +2,11 @@ class SnippetsController < ApplicationController
   before_action :set_snippet, only: [:show, :edit, :update, :destroy]
 
   def index
-    @snippets = Snippet.all
+    @snippets = Snippet.where(archived: false)
+  end
+
+  def archives
+    @snippets = Snippet.where(archived: true)
   end
 
   def show

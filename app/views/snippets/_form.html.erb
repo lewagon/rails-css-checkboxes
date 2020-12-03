@@ -1,14 +1,16 @@
-<%= simple_form_for(snippet) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :category,
-              as: :radio_buttons,
-              collection_wrapper_tag: "div",
-              collection_wrapper_class: 'category-wrapper',
-              item_wrapper_class: 'category-item',
-              input_html: {class: 'category-selector'},
-              collection: Snippet::CATEGORIES %>
-  <%= f.input :code %>
-  <%= f.association :tags, as: :check_boxes, input_html: { class: "tag-selector" }, item_wrapper_class: 'tag-item' %>
-  <%= f.input :archived, input_html: { class: "toggle" } %>
-  <%= f.submit "Save", class: " "  %>
-<% end %>
+<div class="col-xs-12 col-md-6 offset-md-3 card">
+  <%= simple_form_for(snippet) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :category,
+                as: :radio_buttons,
+                collection_wrapper_tag: "div",
+                collection_wrapper_class: 'category-wrapper',
+                item_wrapper_class: 'category-item',
+                input_html: {class: 'category-selector'},
+                collection: Snippet::CATEGORIES %>
+    <%= f.input :code %>
+    <%= f.association :tags, as: :check_boxes, input_html: { class: "tag-selector" }, item_wrapper_class: 'tag-item' %>
+    <%= f.input :archived, input_html: { class: "toggle" } %>
+    <%= f.submit "Save", class: " "  %>
+  <% end %>
+</div>

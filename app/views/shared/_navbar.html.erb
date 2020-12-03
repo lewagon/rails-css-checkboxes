@@ -6,6 +6,11 @@
           <%= image_tag("list.svg") %>
         <% end %>
       </li>
+      <li class="nav-item archives">
+        <%= link_to archives_path, class: "nav-link" do %>
+          <%= image_tag("archives.svg") %>
+        <% end %>
+      </li>
       <li class="nav-item new">
         <%= link_to new_snippet_path, class: "nav-link" do %>
           <%= image_tag("new.svg") %>

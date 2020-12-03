@@ -2,7 +2,7 @@ code, #snippet_code {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 0.8rem;
   display: block;
-  color: #2e2f2f;
+  color: $dark;
   min-height: 98px;
   border-radius: $border-radius;
 }
@@ -17,6 +17,6 @@ pre {
 code {
   border: none;
   border-radius: 0px;
-  border-left: 2px solid #b2b2b2;
+  border-left: 2px solid $medium-gray;
   padding-left: 10px;
 }
