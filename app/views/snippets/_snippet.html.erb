@@ -10,7 +10,7 @@
   <h2><%= snippet.title %></h2>
   <pre><code><%= snippet.code %></code></pre>
   <%= link_to snippet_path(snippet) do %>
-    <button aria-label="Show" class="show-btn">></button>
+    <button aria-label="Show" class="show-btn"></button>
   <% end %>
   <p><%= render partial: 'tag', collection: snippet.tags %></p>
 </div>
