@@ -44,3 +44,12 @@ c = Snippet.new(
 )
 c.tags = [Tag.find_by(name: "Basics"), Tag.find_by(name: "Tip")]
 c.save
+
+a = Snippet.new(
+  title: "Run migration",
+  code: %{rails db:migrate},
+  category: "Ruby"
+)
+a.archived = true
+a.tags = [Tag.find_by(name: "Basics")]
+a.save

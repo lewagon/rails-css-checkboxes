@@ -1,4 +1,4 @@
-<div class="col-sm-12 col-md-6 offset-md-3 card preview <%= snippet.category.downcase %> <%= closed ||= '' %>">
+<div class="col-sm-12 col-md-6 offset-md-3 card <%= snippet.category.downcase %> <%= state ||= '' %> <%= "archived" if snippet.archived %> <%= closed ||= '' %>">
   <div class="tools">
     <%= link_to "", edit_snippet_path(snippet), class:"edit" %>
     <%= link_to "",
@@ -9,5 +9,8 @@
   </div>
   <h2><%= snippet.title %></h2>
   <pre><code><%= snippet.code %></code></pre>
+  <%= link_to snippet_path(snippet) do %>
+    <button aria-label="Show" class="show-btn"></button>
+  <% end %>
   <p><%= render partial: 'tag', collection: snippet.tags %></p>
 </div>

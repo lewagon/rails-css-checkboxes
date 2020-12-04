@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>NiceForms</title>
+    <title>Rails CSS Checkboxes</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
@@ -14,16 +15,10 @@
   <body id="<%= params[:controller] %>_<%= params[:action] %>">
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-    <div class="container">
+    <main class="container">
       <div class="row">
-      <% if ['index', 'show'].include? action_name %>
         <%= yield %>
-      <% else %>
-        <div class="col-xs-12 col-md-6 offset-md-3 card">
-          <%= yield %>
-        </div>
-      <% end %>
       </div>
-    </div>
+    </main>
   </body>
 </html>

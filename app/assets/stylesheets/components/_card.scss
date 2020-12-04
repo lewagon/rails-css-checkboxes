@@ -9,18 +9,12 @@
   p{
     margin: 0;
   }
-}
 
-
-.preview {
   background-repeat: no-repeat !important;
   background-position: 15px 18px, top !important;
   background-size: 20px, 100% !important;
-  height: 218px;
   padding: 14px 48px;
-  overflow-y: auto;
-  margin-bottom: 20px;
-  transition: margin-bottom 0.4s ease;
+  overflow: hidden;
   
   &.ruby{
     background: image-url('ruby.svg'), white;
@@ -33,17 +27,45 @@
   &.css{
     background: image-url('css.svg'), white;
   }
+  
 }
 
-.preview.closed {
-  margin-bottom: -164px;
+.preview {
+  height: 234px;
+  margin-bottom: 20px;
+  transition: margin-bottom 0.4s ease;
+  
+  &.closed {
+    margin-bottom: -180px;
+  }
+
+  & .show-btn {
+    display: block;
+  }
+
+  & code {
+    height: 98px;
+    overflow: hidden;
+  }
 }
 
+.show-btn {
+  display: none;
+  position: absolute;
+  background: image-url('show.svg'), white;
+  background-size: contain;
+  right: 10px;
+  top: 56px;
+  height: 98px;
+  width: 30px;
+  border: none;
+  opacity: 0.2;
+}
 
 .tools {
   position: absolute;
   left: 15px;
-  top: 48px;
+  top: 52px;
 }
 
 .tools > * {
@@ -61,4 +83,16 @@
 
 .tools .delete {
   background-image: image-url('delete.svg');
+}
+
+.archived::after {
+  content: image-url('archive.svg');
+  display: block;
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: 12px;
+  right: 12px;
+  border-radius: 50%;
+  background-color: white;
 }
